@@ -1,0 +1,14 @@
+!!!
+%html{lang: "#{I18n.locale}"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = render partial: 'layouts/head'
+  %body(class="app")
+    -# %div(class="app-top")
+    -#   = render partial: 'shared/nav'
+
+    %div(class="app-body")
+      = yield
+
+    -# %div(class="app-bottom")
+    -#   = render partial: 'shared/footer'

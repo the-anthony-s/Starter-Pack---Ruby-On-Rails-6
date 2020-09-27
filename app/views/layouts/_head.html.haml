@@ -1,0 +1,19 @@
+%meta{content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no', name: 'viewport'}/
+%meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}
+%meta{name: 'HandheldFriendly', content: 'true'}
+%meta{name: 'MobileOptimized', content: '176'}
+%meta{name: 'googlebot', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'}
+%meta{name: 'robots', content: 'index, follow'}/
+%meta{name: 'turbolinks-cache-control', content: 'no-preview'}
+%link{href: "#{request.original_url}", rel: 'canonical'}/
+
+-# Add Favicon
+-# Add Meta Tags
+
+%title= content_for?(:title) ? "#{yield(:title)} | Red Belt Media" : "Red Belt Media | Ready for a challenge"
+
+= csrf_meta_tags
+= csp_meta_tag
+= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload', turbolink_track: true
+= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload', turbolink_track: true
+= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', turbolink_track: true

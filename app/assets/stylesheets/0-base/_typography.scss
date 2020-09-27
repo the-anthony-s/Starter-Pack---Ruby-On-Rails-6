@@ -1,0 +1,88 @@
+:root {
+  // font family
+  --font-primary: 'Rubik', Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+
+  // font size
+  --text-base-size: 1em; // body font-size
+  --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
+  
+  // line-height
+  --body-line-height: 1.4;
+  --heading-line-height: 1.2;
+  
+  // capital letters - used in combo with the lhCrop mixin
+  --font-primary-capital-letter: 1;
+
+  // unit - don't modify unless you want to change the typography unit (e.g., from Em to Rem units)
+  --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
+}
+
+:root, * {
+  // type scale
+  --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+  --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+}
+
+@supports(--css: variables) {
+  @include bp(md) {
+    :root {
+      --text-base-size: 1.25em;
+      --text-scale-ratio: 1.25;
+    }
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+}
+
+// font family
+.font-primary { font-family: var(--font-primary); }
+
+// color
+.color-matcha-darker { color: alpha(var(--color-matcha-darker), var(--color-o, 1)); }
+.color-matcha-dark { color: alpha(var(--color-matcha-dark), var(--color-o, 1)); }
+.color-matcha { color: alpha(var(--color-matcha), var(--color-o, 1)); }
+.color-matcha-light { color: alpha(var(--color-matcha-light), var(--color-o, 1)); }
+.color-matcha-lighter { color: alpha(var(--color-matcha-lighter), var(--color-o, 1)); }
+.color-yellow-darker { color: alpha(var(--color-yellow-darker), var(--color-o, 1)); }
+.color-yellow-dark { color: alpha(var(--color-yellow-dark), var(--color-o, 1)); }
+.color-yellow { color: alpha(var(--color-yellow), var(--color-o, 1)); }
+.color-yellow-light { color: alpha(var(--color-yellow-light), var(--color-o, 1)); }
+.color-yellow-lighter { color: alpha(var(--color-yellow-lighter), var(--color-o, 1)); }
+.color-blue-darker { color: alpha(var(--color-blue-darker), var(--color-o, 1)); }
+.color-blue-dark { color: alpha(var(--color-blue-dark), var(--color-o, 1)); }
+.color-blue { color: alpha(var(--color-blue), var(--color-o, 1)); }
+.color-blue-light { color: alpha(var(--color-blue-light), var(--color-o, 1)); }
+.color-blue-lighter { color: alpha(var(--color-blue-lighter), var(--color-o, 1)); }
+.color-indigo-darker { color: alpha(var(--color-indigo-darker), var(--color-o, 1)); }
+.color-indigo-dark { color: alpha(var(--color-indigo-dark), var(--color-o, 1)); }
+.color-indigo { color: alpha(var(--color-indigo), var(--color-o, 1)); }
+.color-indigo-light { color: alpha(var(--color-indigo-light), var(--color-o, 1)); }
+.color-indigo-lighter { color: alpha(var(--color-indigo-lighter), var(--color-o, 1)); }
+.color-salmon-darker { color: alpha(var(--color-salmon-darker), var(--color-o, 1)); }
+.color-salmon-dark { color: alpha(var(--color-salmon-dark), var(--color-o, 1)); }
+.color-salmon { color: alpha(var(--color-salmon), var(--color-o, 1)); }
+.color-salmon-light { color: alpha(var(--color-salmon-light), var(--color-o, 1)); }
+.color-salmon-lighter { color: alpha(var(--color-salmon-lighter), var(--color-o, 1)); }
+.color-purple-darker { color: alpha(var(--color-purple-darker), var(--color-o, 1)); }
+.color-purple-dark { color: alpha(var(--color-purple-dark), var(--color-o, 1)); }
+.color-purple { color: alpha(var(--color-purple), var(--color-o, 1)); }
+.color-purple-light { color: alpha(var(--color-purple-light), var(--color-o, 1)); }
+.color-purple-lighter { color: alpha(var(--color-purple-lighter), var(--color-o, 1)); }
+.color-pink-darker { color: alpha(var(--color-pink-darker), var(--color-o, 1)); }
+.color-pink-dark { color: alpha(var(--color-pink-dark), var(--color-o, 1)); }
+.color-pink { color: alpha(var(--color-pink), var(--color-o, 1)); }
+.color-pink-light { color: alpha(var(--color-pink-light), var(--color-o, 1)); }
+.color-pink-lighter { color: alpha(var(--color-pink-lighter), var(--color-o, 1)); }
